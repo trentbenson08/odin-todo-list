@@ -13,11 +13,11 @@ export default function createDatabase(){
     database.splice(index, 1);
   };
 
-  const getDatabase = () => database;
+  const getList = () => database;
 
   return {
     addItem,
     deleteItem,
-    getDatabase
+    getList
   };
 };

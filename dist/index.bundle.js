@@ -130,13 +130,23 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
-/***/ "./src/createDatabase.js":
-/*!*******************************!*\
-  !*** ./src/createDatabase.js ***!
-  \*******************************/
+/***/ "./src/createItem.js":
+/*!***************************!*\
+  !*** ./src/createItem.js ***!
+  \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ createDatabase)\n/* harmony export */ });\nfunction createDatabase(){\n  const database = [];\n\n  // Takes an object, pushes it to the database and returns the index where the item\n  const addItem = (todoItem) => {\n    const itemIndex = database.push(todoItem) - 1;\n    return itemIndex;\n  };\n\n\n  // Takes unique ID from data-index finds it in the database\n  const deleteItem = (index) => {\n    database.splice(index, 1);\n  };\n\n  const getDatabase = () => database;\n\n  return {\n    addItem,\n    deleteItem,\n    getDatabase\n  };\n};\n\n//# sourceURL=webpack://odin-todo-list/./src/createDatabase.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ createItem)\n/* harmony export */ });\nfunction createItem(title, description, due, priority){\n  const values = {\n    title,\n    description,\n    due,\n    priority,\n    complete: false,\n  };\n\n  const editValue = (key, value) => {\n    values[key] = value;\n  };\n\n  const getValues = () => values;\n  \n  return{\n    editValue,\n    getValues\n  };\n}\n\n//# sourceURL=webpack://odin-todo-list/./src/createItem.js?");
+
+/***/ }),
+
+/***/ "./src/createList.js":
+/*!***************************!*\
+  !*** ./src/createList.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ createDatabase)\n/* harmony export */ });\nfunction createDatabase(){\n  const database = [];\n\n  // Takes an object, pushes it to the database and returns the index where the item\n  const addItem = (todoItem) => {\n    const itemIndex = database.push(todoItem) - 1;\n    return itemIndex;\n  };\n\n\n  // Takes unique ID from data-index finds it in the database\n  const deleteItem = (index) => {\n    database.splice(index, 1);\n  };\n\n  const getList = () => database;\n\n  return {\n    addItem,\n    deleteItem,\n    getList\n  };\n};\n\n//# sourceURL=webpack://odin-todo-list/./src/createList.js?");
 
 /***/ }),
 
@@ -146,7 +156,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _createDatabase__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createDatabase */ \"./src/createDatabase.js\");\n/* harmony import */ var _styles_reset_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/reset.css */ \"./src/styles/reset.css\");\n/* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/style.css */ \"./src/styles/style.css\");\n\n\n\n\n\n\n// eslint-disable-next-line no-unused-vars\nconst db = (0,_createDatabase__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n\n// eslint-disable-next-line no-debugger\ndebugger;\n\n\n//# sourceURL=webpack://odin-todo-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _createList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createList */ \"./src/createList.js\");\n/* harmony import */ var _createItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./createItem */ \"./src/createItem.js\");\n/* harmony import */ var _styles_reset_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/reset.css */ \"./src/styles/reset.css\");\n/* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/style.css */ \"./src/styles/style.css\");\n\n\n\n\n\n\n\nconst db = (0,_createList__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\nconst i = (0,_createItem__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('title', 'description', 'due date', 'priority');\n\ndb.addItem(i);\n\ndb.getList()[0].editValue('title', 'HelloWorld');\n\n// eslint-disable-next-line no-debugger\ndebugger;\n\n//# sourceURL=webpack://odin-todo-list/./src/index.js?");
 
 /***/ })
 

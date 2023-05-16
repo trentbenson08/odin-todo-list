@@ -7,7 +7,6 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    createDatabase: './src/createDatabase.js'
   },
   plugins: [
     new HtmlWebpackPlugin({
