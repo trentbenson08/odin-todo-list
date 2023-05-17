@@ -1,19 +1,23 @@
 import createList from './createList';
 import createItem from './createItem';
 import saveLocal from './saveLocal';
+import loadLocal from './loadLocal';
 
 import './styles/reset.css';
 import './styles/style.css';
 
-const listObject = createList();
 
-for(let i = 0; i < 5; i += 1){
-  listObject.addItem(createItem(`title: ${i}`, 'description', 'due date', 'priority'));
-}
+const listObject = createList();
+loadLocal(listObject);
+
+const item = createItem('title', 'description', 'due', 'prior');
+
+debugger;
 
 saveLocal(listObject.getList());
+
 // eslint-disable-next-line no-debugger
-debugger;
+
 
 
 /**

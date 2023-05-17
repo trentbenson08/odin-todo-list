@@ -4,7 +4,7 @@ export default function createList(){
   // Takes an object, pushes it to the list and returns the index where the item
   const addItem = (todoItem) => {
     const itemIndex = list.push(todoItem) - 1;
-    return itemIndex;
+    list[itemIndex].getValues().index = itemIndex;
   };
 
 

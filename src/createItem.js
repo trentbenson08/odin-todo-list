@@ -5,6 +5,7 @@ export default function createItem(title, description, due, priority){
     due,
     priority,
     complete: false,
+    index: undefined
   };
 
   const editValue = (key, value) => {
