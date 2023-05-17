@@ -1,19 +1,19 @@
-export default function createDatabase(){
-  const database = [];
+export default function createList(){
+  const list = [];
 
-  // Takes an object, pushes it to the database and returns the index where the item
+  // Takes an object, pushes it to the list and returns the index where the item
   const addItem = (todoItem) => {
-    const itemIndex = database.push(todoItem) - 1;
+    const itemIndex = list.push(todoItem) - 1;
     return itemIndex;
   };
 
 
-  // Takes unique ID from data-index finds it in the database
+  // Takes unique ID from data-index finds it in the list
   const deleteItem = (index) => {
-    database.splice(index, 1);
+    list.splice(index, 1);
   };
 
-  const getList = () => database;
+  const getList = () => list;
 
   return {
     addItem,

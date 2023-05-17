@@ -1,16 +1,37 @@
 import createList from './createList';
 import createItem from './createItem';
+import saveLocal from './saveLocal';
 
 import './styles/reset.css';
 import './styles/style.css';
 
+const listObject = createList();
 
-const db = createList();
-const i = createItem('title', 'description', 'due date', 'priority');
+for(let i = 0; i < 5; i += 1){
+  listObject.addItem(createItem(`title: ${i}`, 'description', 'due date', 'priority'));
+}
 
-db.addItem(i);
-
-db.getList()[0].editValue('title', 'HelloWorld');
-
+saveLocal(listObject.getList());
 // eslint-disable-next-line no-debugger
 debugger;
+
+
+/**
+ * renderPage();
+ * 
+ * renderForm();
+ * 
+ * listObject = createList();
+ * 
+ * loadLocal();
+ * 
+ * renderItems();
+ * 
+ * 
+ * !! ON SUBMIT FORM !!
+ * 
+ * formHandler(event)
+ * 
+ * saveLocal(listObject.getList())
+ * 
+ */
