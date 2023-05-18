@@ -10,13 +10,11 @@ import '../styles/style.css';
 const listObject = createList();
 loadLocal(listObject);
 
+// eslint-disable-next-line no-unused-vars
 const item = createItem('title', 'description', 'due', 'prior');
 
 
 saveLocal(listObject);
-
-// eslint-disable-next-line no-debugger
-
 
 
 /**
