@@ -3,8 +3,8 @@ import createItem from './createItem';
 import saveLocal from './saveLocal';
 import loadLocal from './loadLocal';
 
-import './styles/reset.css';
-import './styles/style.css';
+import '../styles/reset.css';
+import '../styles/style.css';
 
 
 const listObject = createList();
@@ -12,9 +12,8 @@ loadLocal(listObject);
 
 const item = createItem('title', 'description', 'due', 'prior');
 
-debugger;
 
-saveLocal(listObject.getList());
+saveLocal(listObject);
 
 // eslint-disable-next-line no-debugger
 

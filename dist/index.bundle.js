@@ -130,53 +130,53 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
-/***/ "./src/createItem.js":
-/*!***************************!*\
-  !*** ./src/createItem.js ***!
-  \***************************/
+/***/ "./src/scripts/createItem.js":
+/*!***********************************!*\
+  !*** ./src/scripts/createItem.js ***!
+  \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ createItem)\n/* harmony export */ });\nfunction createItem(title, description, due, priority){\n  const values = {\n    title,\n    description,\n    due,\n    priority,\n    complete: false,\n    index: undefined\n  };\n\n  const editValue = (key, value) => {\n    values[key] = value;\n  };\n\n  const getValues = () => values;\n  \n  return{\n    editValue,\n    getValues\n  };\n}\n\n//# sourceURL=webpack://odin-todo-list/./src/createItem.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ createItem)\n/* harmony export */ });\nfunction createItem(title, description, due, priority){\n  const values = {\n    title,\n    description,\n    due,\n    priority,\n    complete: false,\n    index: undefined\n  };\n\n  const editValue = (key, value) => {\n    values[key] = value;\n  };\n\n  const getValues = () => values;\n  \n  return{\n    editValue,\n    getValues\n  };\n}\n\n//# sourceURL=webpack://odin-todo-list/./src/scripts/createItem.js?");
 
 /***/ }),
 
-/***/ "./src/createList.js":
-/*!***************************!*\
-  !*** ./src/createList.js ***!
-  \***************************/
+/***/ "./src/scripts/createList.js":
+/*!***********************************!*\
+  !*** ./src/scripts/createList.js ***!
+  \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ createList)\n/* harmony export */ });\nfunction createList(){\n  const list = [];\n\n  // Takes an object, pushes it to the list and returns the index where the item\n  const addItem = (todoItem) => {\n    const itemIndex = list.push(todoItem) - 1;\n    list[itemIndex].getValues().index = itemIndex;\n  };\n\n\n  // Takes unique ID from data-index finds it in the list\n  const deleteItem = (index) => {\n    list.splice(index, 1);\n  };\n\n  const getList = () => list;\n\n  return {\n    addItem,\n    deleteItem,\n    getList\n  };\n};\n\n//# sourceURL=webpack://odin-todo-list/./src/createList.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ createList)\n/* harmony export */ });\nfunction createList(){\n  const list = [];\n\n  // Takes an object, pushes it to the list and returns the index where the item\n  const addItem = (todoItem) => {\n    const itemIndex = list.push(todoItem) - 1;\n    list[itemIndex].getValues().index = itemIndex;\n  };\n\n\n  // Takes unique ID from data-index finds it in the list\n  const deleteItem = (index) => {\n    list.splice(index, 1);\n  };\n\n  const getList = () => list;\n\n  return {\n    addItem,\n    deleteItem,\n    getList\n  };\n};\n\n//# sourceURL=webpack://odin-todo-list/./src/scripts/createList.js?");
 
 /***/ }),
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
+/***/ "./src/scripts/index.js":
+/*!******************************!*\
+  !*** ./src/scripts/index.js ***!
+  \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _createList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createList */ \"./src/createList.js\");\n/* harmony import */ var _createItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./createItem */ \"./src/createItem.js\");\n/* harmony import */ var _saveLocal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./saveLocal */ \"./src/saveLocal.js\");\n/* harmony import */ var _loadLocal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./loadLocal */ \"./src/loadLocal.js\");\n/* harmony import */ var _styles_reset_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/reset.css */ \"./src/styles/reset.css\");\n/* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles/style.css */ \"./src/styles/style.css\");\n\n\n\n\n\n\n\n\n\nconst listObject = (0,_createList__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n(0,_loadLocal__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(listObject);\n\nconst item = (0,_createItem__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('title', 'description', 'due', 'prior');\n\ndebugger;\n\n(0,_saveLocal__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(listObject.getList());\n\n// eslint-disable-next-line no-debugger\n\n\n\n/**\n * renderPage();\n * \n * renderForm();\n * \n * listObject = createList();\n * \n * loadLocal();\n * \n * renderItems();\n * \n * \n * !! ON SUBMIT FORM !!\n * \n * formHandler(event)\n * \n * saveLocal(listObject.getList())\n * \n */\n\n//# sourceURL=webpack://odin-todo-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _createList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createList */ \"./src/scripts/createList.js\");\n/* harmony import */ var _createItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./createItem */ \"./src/scripts/createItem.js\");\n/* harmony import */ var _saveLocal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./saveLocal */ \"./src/scripts/saveLocal.js\");\n/* harmony import */ var _loadLocal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./loadLocal */ \"./src/scripts/loadLocal.js\");\n/* harmony import */ var _styles_reset_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/reset.css */ \"./src/styles/reset.css\");\n/* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/style.css */ \"./src/styles/style.css\");\n\n\n\n\n\n\n\n\n\nconst listObject = (0,_createList__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n(0,_loadLocal__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(listObject);\n\nconst item = (0,_createItem__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('title', 'description', 'due', 'prior');\n\n\n(0,_saveLocal__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(listObject);\n\n// eslint-disable-next-line no-debugger\n\n\n\n/**\n * renderPage();\n * \n * renderForm();\n * \n * listObject = createList();\n * \n * loadLocal();\n * \n * renderItems();\n * \n * \n * !! ON SUBMIT FORM !!\n * \n * formHandler(event)\n * \n * saveLocal(listObject.getList())\n * \n */\n\n//# sourceURL=webpack://odin-todo-list/./src/scripts/index.js?");
 
 /***/ }),
 
-/***/ "./src/loadLocal.js":
-/*!**************************!*\
-  !*** ./src/loadLocal.js ***!
-  \**************************/
+/***/ "./src/scripts/loadLocal.js":
+/*!**********************************!*\
+  !*** ./src/scripts/loadLocal.js ***!
+  \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadLocal)\n/* harmony export */ });\n/* harmony import */ var _createItem__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createItem */ \"./src/createItem.js\");\n\n\nfunction loadLocal(list){\n  const loadedList = [];\n  for(let i = 0; i < localStorage.length; i += 1){\n    const loadedValues = JSON.parse(localStorage.getItem(`${i}`));\n    const loadedItem = (0,_createItem__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(loadedValues.title, loadedValues.description, loadedValues.due, loadedValues.priority);\n    loadedList.push(loadedItem);\n  }\n  \n  loadedList.forEach(item => { list.addItem(item); });\n}\n\n//# sourceURL=webpack://odin-todo-list/./src/loadLocal.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadLocal)\n/* harmony export */ });\n/* harmony import */ var _createItem__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createItem */ \"./src/scripts/createItem.js\");\n\n\nfunction loadLocal(list){\n  const loadedList = [];\n  for(let i = 0; i < localStorage.length; i += 1){\n    const loadedValues = JSON.parse(localStorage.getItem(`${i}`));\n    const loadedItem = (0,_createItem__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(loadedValues.title, loadedValues.description, loadedValues.due, loadedValues.priority);\n    loadedList.push(loadedItem);\n  }\n  \n  loadedList.forEach(item => { list.addItem(item); });\n}\n\n//# sourceURL=webpack://odin-todo-list/./src/scripts/loadLocal.js?");
 
 /***/ }),
 
-/***/ "./src/saveLocal.js":
-/*!**************************!*\
-  !*** ./src/saveLocal.js ***!
-  \**************************/
+/***/ "./src/scripts/saveLocal.js":
+/*!**********************************!*\
+  !*** ./src/scripts/saveLocal.js ***!
+  \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ saveLocal)\n/* harmony export */ });\nfunction saveLocal(listObject){\n  const list = listObject.getList();\n  localStorage.clear();\n  list.forEach(item => {\n    const values = item.getValues();\n    localStorage.setItem(`${values.index}`, JSON.stringify(values));\n  });\n}\n\n//# sourceURL=webpack://odin-todo-list/./src/saveLocal.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ saveLocal)\n/* harmony export */ });\nfunction saveLocal(listObject){\n  const list = listObject.getList();\n  localStorage.clear();\n  list.forEach(item => {\n    const values = item.getValues();\n    localStorage.setItem(`${values.index}`, JSON.stringify(values));\n  });\n}\n\n//# sourceURL=webpack://odin-todo-list/./src/scripts/saveLocal.js?");
 
 /***/ })
 
@@ -257,7 +257,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/scripts/index.js");
 /******/ 	
 /******/ })()
 ;
