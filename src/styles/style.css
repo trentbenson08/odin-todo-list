@@ -47,18 +47,38 @@ main>#sidebar{
   gap: 2rem;
 }
 main>#content{
-  padding: 1rem;
+  padding: .5rem;
 }
 main #card-container{
-  background-color: var(--bg-primary);
-  padding: .5rem
+  padding: .25rem
 }
 
+main .card{
+  background-color: white;
+  padding: .5rem;
+  margin-bottom: .5rem;
+  border: 2px solid black;
+  border-radius: .5rem;
+}
+.card svg{
+  height: 1.5rem;
+  width: 1.5rem;
+}
+svg path{
+  fill: black;
+}
 /*OPEN*/
 .card .header,
 .card .footer{
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
+}
+.card .header div+div{
+  font-weight: 800;
+}
+.card footer>.due-date :first-child,
+.card .priority :first-child{
+  font-weight: 600;
 }
 .card .footer>div{
   display: flex;
@@ -77,26 +97,27 @@ main #card-container{
 }
 .card>.header>.right{
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   margin-left:auto;
+  align-items: center;
 }
-
+.card .header{
+  align-items: center;
+}
 /*CLOSED*/
 .card.hidden .description,
 .card.hidden .footer>.due-date,
 .card.hidden .footer>.priority,
-.card.hidden .delete{
+.card.hidden .footer>.button{
   display: none;
 }
 .card.hidden .header .due-date{
   display: block;
   margin-left: auto
 }
-
-
-
-
-
+.card.hidden .header .due-date{
+  font-weight: 300;
+}
 
 
 
