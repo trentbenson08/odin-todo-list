@@ -55,25 +55,43 @@ main #card-container{
 }
 
 /*OPEN*/
-.header,
-.footer{
+.card .header,
+.card .footer{
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
-.card>.footer>div{
+.card .footer>div{
   display: flex;
   width: fit-content;
 }
-.description{
+.card .description{
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-.drop,
-.delete{
+.card .drop,
+.card .delete{
+  margin-left:auto;
+}
+.card>.header .due-date{
+  display: none;
+}
+.card>.header>.right{
+  display: flex;
+  gap: 2rem;
   margin-left:auto;
 }
 
 /*CLOSED*/
+.card.hidden .description,
+.card.hidden .footer>.due-date,
+.card.hidden .footer>.priority,
+.card.hidden .delete{
+  display: none;
+}
+.card.hidden .header .due-date{
+  display: block;
+  margin-left: auto
+}
 
 
 
