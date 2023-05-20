@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \********************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \":root{\\n  font-size: 16px;\\n  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\\n\\n  --text-primary: black;\\n  --text-secondary: rgb(87, 87, 87);\\n  --text-tertiary: white;\\n\\n  --bg-primary: #2978A0;\\n  --bg-secondary: #C5D5E4;\\n  --bg-tertiary: #474242;\\n  --bg-quaternary: #C1EEFF;\\n}\\nhtml{\\n  height: 100%;\\n  box-sizing: border-box;\\n}\\nbody{\\n  height: 100vh;\\n  width: 100vw;\\n  height: inherit;\\n  width: inherit;\\n  display: grid;\\n  grid-template-rows: 1.5fr 10fr 1.5rem;\\n}\\n\\n\\n\\n/* HEADER */\\nheader{\\n  background-color: var(--bg-primary);\\n  min-height: 5rem;\\n  display: flex;\\n  align-items: center;\\n  font-size: 2.5rem;\\n  font-weight: 700;\\n  padding-top: .5rem;\\n  border-bottom: 2px solid #19465d;\\n  z-index: 1;\\n  position: sticky;\\n  top: 0px;\\n}\\nheader h1{\\n  margin: 1rem;\\n  color: var(--text-tertiary);\\n  text-decoration: underline ;\\n  padding-bottom: 8px;\\n  \\n}\\nheader svg{\\n  margin-left: .5rem;\\n  margin-bottom: 1px;\\n  height: 3rem;\\n  width: 3rem;\\n}\\nheader svg path{\\n  fill: white;\\n}\\n\\n\\n\\n\\n/* MAIN */\\nmain{\\n  display: grid;\\n  grid-template-columns: 1fr 4fr;\\n}\\nmain>#sidebar{\\n  background-color: var(--bg-quaternary);\\n  border-right:#457f94 2px solid ;\\n  display: flex;\\n  flex-direction: column;\\n  gap: 2rem;\\n}\\n#sidebar{\\n  padding: .5rem;\\n}\\n#sidebar svg{\\n  height: 2rem;\\n  width: auto;\\n}\\n#sidebar ul+ul svg{\\n  height: 2.5rem;\\n}\\n#sidebar .header{\\n  display: flex;\\n  flex-direction: column;\\n  font-weight: 800;\\n  text-decoration: underline;\\n  margin-bottom: .5rem;\\n  margin-top: 1rem;\\n}\\n#sidebar ul{\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n}\\n#sidebar li{\\n  margin: .25rem;\\n}\\n#sidebar a{\\n  color: var(--text-secondary);\\n  text-decoration: none;\\n  font-weight: 500;\\n}\\n#sidebar a:link{\\n  color: var(--text-secondary);\\n}\\nmain>#content{\\n  padding: .5rem;\\n}\\nmain #card-container{\\n  padding: .25rem\\n}\\nmain .card{\\n  background-color: var(--bg-secondary);\\n  padding: .5rem;\\n  margin-bottom: .5rem;\\n  border: 2px solid black;\\n  border-radius: .5rem;\\n}\\nmain .card.important{\\n  border: 2px solid black;\\n  /*FLAG*/\\n}\\n.header .right svg{\\n  height: 2rem; \\n  width: 2rem;\\n}\\n.card svg,\\n.card img{\\n  height: 1.5rem;\\n  width: 1.5rem;\\n}\\nsvg path{\\n  fill: black;\\n}\\n/*OPEN*/\\n.card .header,\\n.card .footer{\\n  display: flex;\\n  gap: 1rem;\\n}\\n.card .header div+div{\\n  font-size: 1.1rem;\\n  font-weight: 800;\\n  padding-bottom: 2px;\\n}\\n.card .due-date :first-child,\\n.card .priority :first-child{\\n  font-weight: 600;\\n}\\n.card .footer>div{\\n  display: flex;\\n  align-items: center;\\n  width: fit-content;\\n}\\n.card .description{\\n  margin-top: 1rem;\\n  margin-bottom: 1rem;\\n}\\n.card .header:last-child,\\n.card .footer .button{\\n  margin-left:auto;\\n}\\n.card>.header .due-date{\\n  display: none;\\n}\\n.card>.header>.right{\\n  display: flex;\\n  gap: 1rem;\\n  margin-left:auto;\\n  align-items: center;\\n}\\n.card .header{\\n  align-items: center;\\n}\\n/*CLOSED*/\\n.card.hidden .description,\\n.card.hidden .footer>.due-date,\\n.card.hidden .footer>.priority,\\n.card.hidden .footer>.button{\\n  display: none;\\n}\\n.card.hidden .header .due-date{\\n  display: block;\\n  margin-left: auto\\n}\\n.card.hidden .header .due-date{\\n  font-size: .75rem;\\n}\\n\\n\\n\\n/* FOOTER */\\nfooter{\\n  background-color: var(--bg-tertiary);\\n  display: flex;\\n  justify-content: center;\\n  align-items: center;\\n  gap: .5rem;\\n  font-size: .75rem;\\n}\\nfooter svg{\\n  width: 1.2rem;\\n  height: 1.2rem;\\n}\\nfooter svg path{\\n  fill: var(--text-tertiary);\\n}\\nfooter :link{\\n  text-decoration: none;\\n  color: var(--text-tertiary);\\n}\\nfooter :visited{\\n  color: var(--text-tertiary);\\n}\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://odin-todo-list/./src/styles/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \":root{\\n  font-size: 16px;\\n  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\\n\\n  --text-primary: black;\\n  --text-secondary: rgb(87, 87, 87);\\n  --text-tertiary: white;\\n\\n  --bg-primary: #2978A0;\\n  --bg-secondary: #C5D5E4;\\n  --bg-tertiary: #474242;\\n  --bg-quaternary: #C1EEFF;\\n}\\nhtml{\\n\\n  box-sizing: border-box;\\n}\\nbody{\\n\\n  height: inherit;\\n  width: inherit;\\n  display: grid;\\n  grid-template-rows: minmax(10vh, 6rem) 10fr 1.5rem;\\n}\\n\\n\\n\\n/* HEADER */\\nheader{\\n  background-color: var(--bg-primary);\\n  min-height: 5rem;\\n  display: flex;\\n  align-items: center;\\n  font-size: 2.5rem;\\n  font-weight: 700;\\n  padding-top: .5rem;\\n  border-bottom: 2px solid #19465d;\\n  z-index: 1;\\n  position: sticky;\\n  top: 0px;\\n}\\nheader h1{\\n  margin: 1rem;\\n  color: var(--text-tertiary);\\n  text-decoration: underline ;\\n  padding-bottom: 8px;\\n  \\n}\\nheader svg{\\n  margin-left: 2.5vw;\\n  margin-bottom: 1px;\\n  height: 3rem;\\n  width: 3rem;\\n}\\nheader svg path{\\n  fill: white;\\n}\\n\\n\\n\\n\\n/* MAIN */\\nmain{\\n  display: grid;\\n  grid-template-columns: 1fr 8fr;\\n}\\nmain>#sidebar{\\n  background-color: var(--bg-quaternary);\\n  border-right:#457f94 2px solid ;\\n  display: flex;\\n  flex-direction: column;\\n  gap: 2rem;\\n}\\n#sidebar{\\n  padding: .5rem;\\n}\\n#sidebar svg{\\n  height: 2rem;\\n  width: auto;\\n}\\n#sidebar ul+ul svg{\\n  height: 2.5rem;\\n}\\n#sidebar .header{\\n  display: flex;\\n  flex-direction: column;\\n  font-weight: 800;\\n  text-decoration: underline;\\n  margin-bottom: .5rem;\\n  margin-top: 1rem;\\n}\\n#sidebar ul{\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n}\\n#sidebar li{\\n  margin: .25rem;\\n}\\n#sidebar a{\\n  color: var(--text-secondary);\\n  text-decoration: none;\\n  font-weight: 500;\\n  display: flex;\\n  white-space: nowrap;\\n}\\nmain>#content{\\n  padding: .5rem;\\n  max-width: 75rem;\\n  justify-self: center;\\n}\\nmain #card-container{\\n  padding: .25rem;\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  \\n}\\nmain .card{\\n  background-color: var(--bg-secondary);\\n  padding: .5rem;\\n  margin-bottom: .5rem;\\n  border: 2px solid black;\\n  border-radius: .5rem;\\n\\n}\\nmain .card.important{\\n  border: 2px solid black;\\n  /*FLAG*/\\n}\\n.header .right svg{\\n  height: 2rem; \\n  width: 2rem;\\n}\\n.card svg,\\n.card img{\\n  height: 1.5rem;\\n  width: 1.5rem;\\n}\\nsvg path{\\n  fill: black;\\n}\\n/*OPEN*/\\n.card .header,\\n.card .footer{\\n  display: flex;\\n  gap: 1rem;\\n}\\n.card .header div+div{\\n  font-size: 1.1rem;\\n  font-weight: 800;\\n  padding-bottom: 2px;\\n}\\n.card .due-date :first-child,\\n.card .priority :first-child{\\n  font-weight: 600;\\n}\\n.card .footer>div{\\n  display: flex;\\n  align-items: center;\\n  width: fit-content;\\n}\\n.card .description{\\n  margin-top: 1rem;\\n  margin-bottom: 1rem;\\n}\\n.card .header:last-child,\\n.card .footer .button{\\n  margin-left:auto;\\n}\\n.card>.header .due-date{\\n  display: none;\\n}\\n.card>.header>.right{\\n  display: flex;\\n  gap: 1rem;\\n  margin-left:auto;\\n  align-items: center;\\n}\\n.card .header{\\n  align-items: center;\\n}\\n/*CLOSED*/\\n.card.hidden .description,\\n.card.hidden .footer>.due-date,\\n.card.hidden .footer>.priority,\\n.card.hidden .footer>.button{\\n  display: none;\\n}\\n.card.hidden .header .due-date{\\n  display: block;\\n  margin-left: auto\\n}\\n.card.hidden .header .due-date{\\n  font-size: .75rem;\\n}\\n\\n\\n\\n/* FOOTER */\\nfooter{\\n  background-color: var(--bg-tertiary);\\n  display: flex;\\n  justify-content: center;\\n  align-items: center;\\n  gap: .5rem;\\n  font-size: .75rem;\\n}\\nfooter svg{\\n  width: 1.2rem;\\n  height: 1.2rem;\\n}\\nfooter svg path{\\n  fill: var(--text-tertiary);\\n}\\nfooter :link{\\n  text-decoration: none;\\n  color: var(--text-tertiary);\\n}\\nfooter :visited{\\n  color: var(--text-tertiary);\\n}\\n\\n#sidebar a:hover{\\n  text-decoration: underline;\\n}\\n#sidebar a:active{\\n  color: rgb(160, 160, 160);\\n}\\n\\n.card svg:hover{\\n  cursor: pointer;\\n}\\n.card svg:active{\\n  outline: 1px  black inset;\\n  background-color: rgba(0, 0, 0, 0.206);\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://odin-todo-list/./src/styles/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -156,7 +156,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _createList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createList */ \"./src/scripts/createList.js\");\n/* harmony import */ var _createItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./createItem */ \"./src/scripts/createItem.js\");\n/* harmony import */ var _saveLocal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./saveLocal */ \"./src/scripts/saveLocal.js\");\n/* harmony import */ var _loadLocal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./loadLocal */ \"./src/scripts/loadLocal.js\");\n/* harmony import */ var _styles_reset_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/reset.css */ \"./src/styles/reset.css\");\n/* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/style.css */ \"./src/styles/style.css\");\n\n\n\n\n\n\n\n\n\nconst listObject = (0,_createList__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n(0,_loadLocal__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(listObject);\n\n// eslint-disable-next-line no-unused-vars\nconst item = (0,_createItem__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('title', 'description', 'due', 'prior');\n\n\n(0,_saveLocal__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(listObject);\n\n\n/**\n * renderPage();\n * \n * renderForm();\n * \n * listObject = createList();\n * \n * loadLocal();\n * \n * renderItems();\n * \n * \n * !! ON SUBMIT FORM !!\n * \n * formHandler(event)\n * \n * saveLocal(listObject.getList())\n * \n */\n\n//# sourceURL=webpack://odin-todo-list/./src/scripts/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _createList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createList */ \"./src/scripts/createList.js\");\n/* harmony import */ var _createItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./createItem */ \"./src/scripts/createItem.js\");\n/* harmony import */ var _saveLocal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./saveLocal */ \"./src/scripts/saveLocal.js\");\n/* harmony import */ var _loadLocal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./loadLocal */ \"./src/scripts/loadLocal.js\");\n/* harmony import */ var _render__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./render */ \"./src/scripts/render.js\");\n/* harmony import */ var _styles_reset_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/reset.css */ \"./src/styles/reset.css\");\n/* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../styles/style.css */ \"./src/styles/style.css\");\n\n\n\n\n\n\n\n\n\n\nconst listObject = (0,_createList__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n(0,_loadLocal__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(listObject);\n\n// eslint-disable-next-line no-unused-vars\nconst item = (0,_createItem__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('title', 'description', 'due', 'prior');\n\n\n(0,_saveLocal__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(listObject);\n \n(0,_render__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n/**\n * renderPage();\n * \n * renderForm();\n * \n * listObject = createList();\n * \n * loadLocal();\n * \n * renderItems();\n * \n * \n * !! ON SUBMIT FORM !!\n * \n * formHandler(event)\n * \n * saveLocal(listObject.getList())\n * \n */\n\n//# sourceURL=webpack://odin-todo-list/./src/scripts/index.js?");
 
 /***/ }),
 
@@ -170,6 +170,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/scripts/render.js":
+/*!*******************************!*\
+  !*** ./src/scripts/render.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ render)\n/* harmony export */ });\n/* harmony import */ var _images_icons_empty_checkbox_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../images/icons/empty-checkbox.svg */ \"./src/images/icons/empty-checkbox.svg\");\n/* harmony import */ var _images_icons_drop_down_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../images/icons/drop-down.svg */ \"./src/images/icons/drop-down.svg\");\n/* harmony import */ var _images_icons_trash_can_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/icons/trash-can.svg */ \"./src/images/icons/trash-can.svg\");\n\n\n\n\nfunction render(){\n const template = `\n <div class=\"card\">\n\n  <div class=\"header\">\n    <div class=\"button\">\n      <img src=\"${_images_icons_empty_checkbox_svg__WEBPACK_IMPORTED_MODULE_0__}\">\n    </div>\n    <div class=\"title\">\n      <span class=\"target\">${'get the money from mike'}</span>\n    </div>\n    <div class=\"right\">\n      <div class=\"due-date\">\n        <span class=\"target\">${'12/12/12'}</span>\n      </div>\n      <div class=\"button\">\n        <span>\n          <img src=\"${_images_icons_drop_down_svg__WEBPACK_IMPORTED_MODULE_1__}\">\n        </span>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"description\">\n    <span class=\"target\">${'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto unde non fugiat reprehenderit explicabo, eligendi nulla provident voluptates minima culpa sunt hic nisi omnis ea. Eveniet nostrum sed cumque neque.'}</span>\n  </div>\n\n  <div class=\"footer\">\n    <div class=\"due-date\">\n      <span>Due:&nbsp</span>\n      <span class=\"target\">${'12/12/12'}</span>\n    </div>\n    <div class=\"priority\">\n      <span>Priority:&nbsp</span>\n      <span class=\"target\">${'Regular'}</span>\n    </div>\n    <div class=\"button\">\n      <span>\n        <img src=\"${_images_icons_trash_can_svg__WEBPACK_IMPORTED_MODULE_2__}\">\n      </span>\n    </div>\n  </div>\n</div>\n`;\n\ndocument.querySelector('#card-container').insertAdjacentHTML('afterend', template);\n}\n\n//# sourceURL=webpack://odin-todo-list/./src/scripts/render.js?");
+
+/***/ }),
+
 /***/ "./src/scripts/saveLocal.js":
 /*!**********************************!*\
   !*** ./src/scripts/saveLocal.js ***!
@@ -177,6 +187,36 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ saveLocal)\n/* harmony export */ });\nfunction saveLocal(listObject){\n  const list = listObject.getList();\n  localStorage.clear();\n  list.forEach(item => {\n    const values = item.getValues();\n    localStorage.setItem(`${values.index}`, JSON.stringify(values));\n  });\n}\n\n//# sourceURL=webpack://odin-todo-list/./src/scripts/saveLocal.js?");
+
+/***/ }),
+
+/***/ "./src/images/icons/drop-down.svg":
+/*!****************************************!*\
+  !*** ./src/images/icons/drop-down.svg ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"b2b93179666c29030983.svg\";\n\n//# sourceURL=webpack://odin-todo-list/./src/images/icons/drop-down.svg?");
+
+/***/ }),
+
+/***/ "./src/images/icons/empty-checkbox.svg":
+/*!*********************************************!*\
+  !*** ./src/images/icons/empty-checkbox.svg ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"3c3d6f01af9fcf141b09.svg\";\n\n//# sourceURL=webpack://odin-todo-list/./src/images/icons/empty-checkbox.svg?");
+
+/***/ }),
+
+/***/ "./src/images/icons/trash-can.svg":
+/*!****************************************!*\
+  !*** ./src/images/icons/trash-can.svg ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"2fb2e2f2559e720d1c3d.svg\";\n\n//# sourceURL=webpack://odin-todo-list/./src/images/icons/trash-can.svg?");
 
 /***/ })
 
@@ -231,6 +271,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -245,6 +297,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */

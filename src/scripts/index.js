@@ -2,6 +2,7 @@ import createList from './createList';
 import createItem from './createItem';
 import saveLocal from './saveLocal';
 import loadLocal from './loadLocal';
+import render from './render';
 
 import '../styles/reset.css';
 import '../styles/style.css';
@@ -15,8 +16,8 @@ const item = createItem('title', 'description', 'due', 'prior');
 
 
 saveLocal(listObject);
-
-
+ 
+render();
 /**
  * renderPage();
  * 
