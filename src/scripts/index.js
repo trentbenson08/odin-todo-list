@@ -13,8 +13,16 @@ loadLocal(listObject);
 
 // eslint-disable-next-line no-unused-vars
 const item = createItem('title', 'description', 'due', 'prior');
- 
-for(let i=0; i<10; i+=1){render(item.getValues());}
+const item2 = createItem('Hello', 'world', '9/1', 'high');
+const item3 = createItem('goodbye', 'bluesky', '1/1', 'regular');
+
+// listObject.addItem(item);
+// listObject.addItem(item2);
+// listObject.addItem(item3);
+
+console.dir(localStorage);
+
+render(listObject.getList());
 
 saveLocal(listObject);
 
