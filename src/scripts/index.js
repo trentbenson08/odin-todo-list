@@ -7,6 +7,22 @@ import render from './render';
 import '../styles/reset.css';
 import '../styles/style.css';
 
+// MAKE FORM APPEAR/DISAPPEAR
+document.querySelector('#form-button').addEventListener('click', ()=>{
+  const form = document.querySelector('form');
+  form.getAttribute('class');
+  switch (form.getAttribute('class')){
+    case '':
+      form.className = 'hidden';
+      break;
+    case 'hidden':
+      form.className = '';
+      break;
+  default:
+    break;
+  }
+});
+
 
 const listObject = createList();
 loadLocal(listObject);

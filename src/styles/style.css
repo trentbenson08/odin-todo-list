@@ -235,3 +235,52 @@ footer :visited{
   outline: 1px  black inset;
   background-color: rgba(0, 0, 0, 0.206);
 }
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  gap: .25rem;
+  position: absolute;
+  top: 40vh;
+  left: 40vw;
+  background-color: #C1EEFF;
+  border: 2px solid black;
+  padding: 1rem;
+
+}
+#form-button{
+  background-color: var(--bg-primary);
+  height: 3rem;
+  width: 3rem;
+  border: 2px solid black;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 4rem;
+  right: 2rem;
+}
+#form-button>svg{
+  height: 2rem;
+  width: 2rem;
+}
+#form-button>svg>path{
+  fill: white;
+}
+#form-button:active{
+  background-color: var(--bg-quaternary);
+}
+.radio-ctrl{
+  width: 7rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.label{
+  font-weight: bold;
+}
+form.hidden{
+  display: none;
+}

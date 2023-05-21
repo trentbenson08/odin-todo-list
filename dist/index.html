@@ -63,6 +63,41 @@
     <a href="https://github.com/trentbenson08" id="github-link">Find me on GitHub!</a>
   </footer>
 
+  <!-- FORM BUTTON AND CARD -->
+  <div id="form-button">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" /></svg>
+  </div>
+
+  <div id="form">
+    <form action="" class="hidden">
+
+      <label for="title" class="label">Task:</label>
+      <input type="text" id="title">
+
+      <label for="due" class="label">Due Date:</label>
+      <input type="text" id="due">
+
+      <p id="priority" class="label">Priority:</p>
+      <div class="radio-ctrl">
+  
+        <label for="high">High</label>
+        <input type="radio" id="high" name="prior">
+  
+      </div>
+      <div class="radio-ctrl">
+        
+        <label for="reg">Regular</label>
+        <input type="radio" id="reg" name="prior" checked>
+      
+      </div>
+
+      <label for="desc" class="label">Description:</label>
+      <textarea name="description" id="desc" cols="30" rows="5"></textarea>
+
+      <button>Submit</button>
+    </form>
+  </div>
+
 
 </body>
 </html>
