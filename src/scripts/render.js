@@ -2,7 +2,8 @@ import emptyCheckbox from '../images/icons/empty-checkbox.svg';
 import dropDown from '../images/icons/drop-down.svg';
 import trashCan from '../images/icons/trash-can.svg';
 
-export default function render(){
+export default function render(item){
+
  const template = `
  <div class="card">
 
@@ -11,11 +12,11 @@ export default function render(){
       <img src="${emptyCheckbox}">
     </div>
     <div class="title">
-      <span class="target">${'get the money from mike'}</span>
+      <span class="target">${item.title}</span>
     </div>
     <div class="right">
       <div class="due-date">
-        <span class="target">${'12/12/12'}</span>
+        <span class="target">${item.due}</span>
       </div>
       <div class="button">
         <span>
@@ -32,11 +33,11 @@ export default function render(){
   <div class="footer">
     <div class="due-date">
       <span>Due:&nbsp</span>
-      <span class="target">${'12/12/12'}</span>
+      <span class="target">${item.due}</span>
     </div>
     <div class="priority">
       <span>Priority:&nbsp</span>
-      <span class="target">${'Regular'}</span>
+      <span class="target">${item.priority}</span>
     </div>
     <div class="button">
       <span>
