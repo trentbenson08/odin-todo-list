@@ -64,7 +64,7 @@
   </footer>
 
   <!-- FORM BUTTON AND CARD -->
-  <div id="form-button">
+  <div id="form-display">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" /></svg>
   </div>
 
@@ -72,29 +72,29 @@
     <form action="" class="hidden">
 
       <label for="title" class="label">Task:</label>
-      <input type="text" id="title">
+      <input type="text" id="titleF">
 
       <label for="due" class="label">Due Date:</label>
-      <input type="text" id="due">
+      <input type="text" id="dueF">
 
       <p id="priority" class="label">Priority:</p>
       <div class="radio-ctrl">
   
         <label for="high">High</label>
-        <input type="radio" id="high" name="prior">
+        <input type="radio" id="highF" name="prior">
   
       </div>
       <div class="radio-ctrl">
         
         <label for="reg">Regular</label>
-        <input type="radio" id="reg" name="prior" checked>
+        <input type="radio" id="regF" name="prior" checked>
       
       </div>
 
       <label for="desc" class="label">Description:</label>
-      <textarea name="description" id="desc" cols="30" rows="5"></textarea>
+      <textarea name="description" id="descF" cols="30" rows="5"></textarea>
 
-      <button>Submit</button>
+      <button id="form-button">Submit</button>
     </form>
   </div>
 

@@ -3,12 +3,13 @@ import createItem from './createItem';
 import saveLocal from './saveLocal';
 import loadLocal from './loadLocal';
 import render from './render';
+import handleForm from './handleForm';
 
 import '../styles/reset.css';
 import '../styles/style.css';
 
 // MAKE FORM APPEAR/DISAPPEAR
-document.querySelector('#form-button').addEventListener('click', ()=>{
+document.querySelector('#form-display').addEventListener('click', ()=>{
   const form = document.querySelector('form');
   form.getAttribute('class');
   switch (form.getAttribute('class')){
@@ -24,21 +25,26 @@ document.querySelector('#form-button').addEventListener('click', ()=>{
 });
 
 
+
+
 const listObject = createList();
 loadLocal(listObject);
 
-// eslint-disable-next-line no-unused-vars
-const item = createItem('title', 'description', 'due', 'prior');
-const item2 = createItem('Hello', 'world', '9/1', 'high');
-const item3 = createItem('goodbye', 'bluesky', '1/1', 'regular');
-
-// listObject.addItem(item);
-// listObject.addItem(item2);
-// listObject.addItem(item3);
-
-console.dir(localStorage);
-
 render(listObject.getList());
+
+// Handle Form Submit
+document.querySelector('#form-button').addEventListener('click', (event) =>{
+  const newItem = handleForm(event);
+  listObject.addItem(newItem);
+  render(listObject.getList());
+});
+
+
+
+
+
+
+
 
 saveLocal(listObject);
 

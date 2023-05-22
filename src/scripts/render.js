@@ -2,8 +2,13 @@ import emptyCheckbox from '../images/icons/empty-checkbox.svg';
 import dropDown from '../images/icons/drop-down.svg';
 import trashCan from '../images/icons/trash-can.svg';
 
-export default function render(list){
-  console.log(list);  
+export default function render(list){  
+  
+  const cardContainer = document.querySelector('#card-container');
+  while(cardContainer.childElementCount){
+    cardContainer.lastChild.remove();
+  }
+  
   list.forEach(item => {
     const values = item.getValues();
 
@@ -50,7 +55,10 @@ export default function render(list){
       </div>
       </div>
   `;
-    document.querySelector('#card-container').insertAdjacentHTML('beforeend', template);
+    cardContainer.insertAdjacentHTML('beforeend', template);
+  
   });
+
+
 
 }
