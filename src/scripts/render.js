@@ -13,11 +13,11 @@ export default function render(list){
     const values = item.getValues();
 
     const template = `
-      <div class="card">
+      <div class="card" data-index="${values.index}">
 
       <div class="header">
         <div class="button">
-          <img src="${emptyCheckbox}">
+          <img src="${emptyCheckbox}" id="button-checkbox">
         </div>
         <div class="title">
           <span class="target">${values.title}</span>
@@ -28,14 +28,14 @@ export default function render(list){
           </div>
           <div class="button">
             <span>
-              <img src="${dropDown}">
+              <img src="${dropDown}" id="button-drop">
             </span>
           </div>
         </div>
       </div>
 
       <div class="description">
-        <span class="target">${'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto unde non fugiat reprehenderit explicabo, eligendi nulla provident voluptates minima culpa sunt hic nisi omnis ea. Eveniet nostrum sed cumque neque.'}</span>
+        <span class="target">${values.description}</span>
       </div>
 
       <div class="footer">
@@ -49,7 +49,7 @@ export default function render(list){
         </div>
         <div class="button">
           <span>
-            <img src="${trashCan}">
+            <img src="${trashCan}" id="button-trash">
           </span>
         </div>
       </div>

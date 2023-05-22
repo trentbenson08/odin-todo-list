@@ -1,9 +1,10 @@
 import createList from './createList';
-import createItem from './createItem';
 import saveLocal from './saveLocal';
 import loadLocal from './loadLocal';
 import render from './render';
 import handleForm from './handleForm';
+import { trash, drop } from './buttons';
+
 
 import '../styles/reset.css';
 import '../styles/style.css';
@@ -24,19 +25,19 @@ document.querySelector('#form-display').addEventListener('click', ()=>{
   }
 });
 
-
-
-
 const listObject = createList();
 loadLocal(listObject);
-
 render(listObject.getList());
+drop(listObject);
 
 // Handle Form Submit
 document.querySelector('#form-button').addEventListener('click', (event) =>{
   const newItem = handleForm(event);
   listObject.addItem(newItem);
+  saveLocal(listObject);
   render(listObject.getList());
+  trash(listObject);
+  drop(listObject);
 });
 
 
@@ -46,7 +47,8 @@ document.querySelector('#form-button').addEventListener('click', (event) =>{
 
 
 
-saveLocal(listObject);
+
+
 
 /**
  * renderPage();
