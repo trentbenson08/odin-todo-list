@@ -3,7 +3,7 @@ import saveLocal from './saveLocal';
 import loadLocal from './loadLocal';
 import render from './render';
 import handleForm from './handleForm';
-import { trash, drop } from './buttons';
+
 
 
 import '../styles/reset.css';
@@ -28,7 +28,6 @@ document.querySelector('#form-display').addEventListener('click', ()=>{
 const listObject = createList();
 loadLocal(listObject);
 render(listObject.getList());
-drop(listObject);
 
 // Handle Form Submit
 document.querySelector('#form-button').addEventListener('click', (event) =>{
@@ -36,11 +35,35 @@ document.querySelector('#form-button').addEventListener('click', (event) =>{
   listObject.addItem(newItem);
   saveLocal(listObject);
   render(listObject.getList());
-  trash(listObject);
-  drop(listObject);
 });
 
 
+document.getElementById('card-container').addEventListener('click', (event)=>{
+  const {target} = event;
+
+  if(target.className === 'button-checkbox'){
+    const i = target.closest('.card').dataset.index;
+    if(listObject.getList()[i].getValues().complete !== true){listObject.getList()[i].editValue('complete', true);}
+    else{listObject.getList()[i].editValue('complete', false);}
+    console.log(listObject.getList()[i].getValues().complete);
+    render(listObject.getList());
+    saveLocal(listObject);
+  }
+  else if(target.className === 'button-trash'){
+    const i = target.closest('.card').dataset.index;
+    listObject.deleteItem(i);
+    render(listObject.getList());
+    saveLocal(listObject);
+  }
+  else if(target.className === 'button-drop'){
+    if(target.closest('.card').className === 'card'){
+      target.closest('.card').className = 'card hidden';
+    }
+    else{
+      target.closest('.card').className = 'card';
+    }
+  }
+});
 
 
 

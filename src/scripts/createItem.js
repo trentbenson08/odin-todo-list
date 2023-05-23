@@ -1,11 +1,10 @@
-export default function createItem(title, description, due, priority){
+export default function createItem(title, description, due, priority, complete = false){
   const values = {
     title,
     description,
     due,
     priority,
-    complete: false,
-    index: undefined
+    complete
   };
 
   const editValue = (key, value) => {
