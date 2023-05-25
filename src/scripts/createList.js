@@ -7,7 +7,6 @@ export default function createList(){
     list[itemIndex].getValues().index = itemIndex;
   };
 
-
   // Takes unique ID from data-index finds it in the list
   const deleteItem = (index) => {
     list.splice(index, 1);

@@ -12,8 +12,6 @@ export default function render(list){
   
   list.forEach(item => {
     const values = item.getValues();
-
-    console.log(values.complete?'checkbox':'emptyCheckbox');
     const template = `
       <div class="card hidden" data-index="${values.index}">
 
@@ -58,9 +56,5 @@ export default function render(list){
       </div>
   `;
     cardContainer.insertAdjacentHTML('beforeend', template);
-  
   });
-
-
-
 }

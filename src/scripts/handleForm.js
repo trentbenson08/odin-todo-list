@@ -3,7 +3,6 @@ import createItem from './createItem';
 export default function handleForm(event) {
   event.preventDefault();
 
-
   const title = document.querySelector('#titleF').value;
   document.querySelector('#titleF').value = '';
 
@@ -25,6 +24,4 @@ export default function handleForm(event) {
   const item = createItem(title, description, due, priority);
 
   return item;
-
-
 }

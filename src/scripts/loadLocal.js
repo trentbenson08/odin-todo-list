@@ -8,6 +8,5 @@ export default function loadLocal(list){
     const loadedItem = createItem(loadedValues.title, loadedValues.description, loadedValues.due, loadedValues.priority, loadedValues.complete);
     loadedList.push(loadedItem);
   }
-  
   loadedList.forEach(item => { list.addItem(item); });
 }

@@ -4,8 +4,6 @@ import loadLocal from './loadLocal';
 import render from './render';
 import handleForm from './handleForm';
 
-
-
 import '../styles/reset.css';
 import '../styles/style.css';
 
@@ -37,7 +35,7 @@ document.querySelector('#form-button').addEventListener('click', (event) =>{
   render(listObject.getList());
 });
 
-
+// Handle Card Buttons
 document.getElementById('card-container').addEventListener('click', (event)=>{
   const {target} = event;
 
@@ -45,7 +43,6 @@ document.getElementById('card-container').addEventListener('click', (event)=>{
     const i = target.closest('.card').dataset.index;
     if(listObject.getList()[i].getValues().complete !== true){listObject.getList()[i].editValue('complete', true);}
     else{listObject.getList()[i].editValue('complete', false);}
-    console.log(listObject.getList()[i].getValues().complete);
     render(listObject.getList());
     saveLocal(listObject);
   }
@@ -64,31 +61,3 @@ document.getElementById('card-container').addEventListener('click', (event)=>{
     }
   }
 });
-
-
-
-
-
-
-
-
-
-/**
- * renderPage();
- * 
- * renderForm();
- * 
- * listObject = createList();
- * 
- * loadLocal();
- * 
- * renderItems();
- * 
- * 
- * !! ON SUBMIT FORM !!
- * 
- * formHandler(event)
- * 
- * saveLocal(listObject.getList())
- * 
- */
